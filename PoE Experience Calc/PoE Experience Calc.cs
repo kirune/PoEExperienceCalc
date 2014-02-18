@@ -67,6 +67,16 @@ namespace PoE_Experience_Calc
                 Results.Text = FinalExperience.ToString() + "%";
                 ExperienceRange.Text = "You will gain 100% experience from killing monsters level " + LowerLevel + " - " + TopLevel;
                                                 }
+            else if (MonsterLevelNum > LowerLevel && MonsterLevelNum < TopLevel)
+            {
+                ExperienceRange.Text = "";
+                Results.Text = "";
+                EffectiveDifference = 0;
+                Experience = Math.Pow((PlayerLevelNum + 5) / (PlayerLevelNum + 5 + Math.Pow(EffectiveDifference, 2.5)), 1.5) * 100;
+                FinalExperience = Math.Round(Experience);
+                Results.Text = FinalExperience.ToString() + "%";
+                ExperienceRange.Text = "You will gain 100% experience from killing monsters level " + LowerLevel + " - " + TopLevel;
+            }
 
             
 
