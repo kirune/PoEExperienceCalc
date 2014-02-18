@@ -49,14 +49,14 @@ namespace PoE_Experience_Calc
             LowerLevel = (PlayerLevelNum - SafeBand);
 
             if (MonsterLevelNum < LowerLevel){
-            ExperienceRange.Text = "";
-            Results.Text = "";
-            EffectiveDifference = LowerLevel - MonsterLevelNum;
-            Experience = Math.Pow((PlayerLevelNum + 5) / (PlayerLevelNum + 5 + Math.Pow(EffectiveDifference, 2.5)), 1.5)*100;
-            FinalExperience = Math.Round(Experience);
-            Results.Text = FinalExperience.ToString() + "%";
-            ExperienceRange.Text = "You will gain 100% experience from killing monsters level " + LowerLevel + " - " + TopLevel;
-            }
+                ExperienceRange.Text = "";
+                Results.Text = "";
+                EffectiveDifference = LowerLevel - MonsterLevelNum;
+                Experience = Math.Pow((PlayerLevelNum + 5) / (PlayerLevelNum + 5 + Math.Pow(EffectiveDifference, 2.5)), 1.5)*100;
+                FinalExperience = Math.Round(Experience);
+                Results.Text = FinalExperience.ToString() + "%";
+                ExperienceRange.Text = "You will gain 100% experience from killing monsters level " + LowerLevel + " - " + TopLevel;
+                                            }
 
             else if (MonsterLevelNum > TopLevel){
                 ExperienceRange.Text = "";
@@ -66,7 +66,7 @@ namespace PoE_Experience_Calc
                 FinalExperience = Math.Round(Experience);
                 Results.Text = FinalExperience.ToString() + "%";
                 ExperienceRange.Text = "You will gain 100% experience from killing monsters level " + LowerLevel + " - " + TopLevel;
-            }
+                                                }
 
             
 
