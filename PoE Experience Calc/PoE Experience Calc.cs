@@ -102,6 +102,7 @@ namespace PoE_Experience_Calc
         {
             MonsterLevel.Text = "";
             PlayerLevel.Text = "";
+            PlayerLevel.Focus();
         }
 
        
