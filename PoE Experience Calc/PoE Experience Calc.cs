@@ -93,6 +93,7 @@ namespace PoE_Experience_Calc
                     ExperienceRange.Text = "You get " + FinalExperience + "% experience for killing monsters level " + MonsterLevelNum + ". \r\n \r\nYou will gain 100% experience from killing monsters level " + LowerLevel + " - " + TopLevel;
                 }
 
+
             }
 
 
