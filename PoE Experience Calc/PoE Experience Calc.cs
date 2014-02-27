@@ -63,7 +63,7 @@ namespace PoE_Experience_Calc
                     //Results.Text = "";
                     EffectiveDifference = LowerLevel - MonsterLevelNum;
                     Experience = Math.Pow((PlayerLevelNum + 5) / (PlayerLevelNum + 5 + Math.Pow(EffectiveDifference, 2.5)), 1.5) * 100;
-                    FinalExperience = Math.Round(Experience);
+                    FinalExperience = Math.Round(Experience,2);
                     if (FinalExperience < 2)
                     { FinalExperience = 2; }
                     ///Results.Text = FinalExperience.ToString() + "%";
@@ -76,7 +76,7 @@ namespace PoE_Experience_Calc
                     ///Results.Text = "";
                     EffectiveDifference = MonsterLevelNum - TopLevel;
                     Experience = Math.Pow((PlayerLevelNum + 5) / (PlayerLevelNum + 5 + Math.Pow(EffectiveDifference, 2.5)), 1.5) * 100;
-                    FinalExperience = Math.Round(Experience);
+                    FinalExperience = Math.Round(Experience,2);
                     if (FinalExperience < 2)
                     { FinalExperience = 2; }
                     ///Results.Text = FinalExperience.ToString() + "%";
@@ -88,7 +88,7 @@ namespace PoE_Experience_Calc
                     ///Results.Text = "";
                     EffectiveDifference = 0;
                     Experience = Math.Pow((PlayerLevelNum + 5) / (PlayerLevelNum + 5 + Math.Pow(EffectiveDifference, 2.5)), 1.5) * 100;
-                    FinalExperience = Math.Round(Experience);
+                    FinalExperience = Math.Round(Experience,2);
                     ///Results.Text = FinalExperience.ToString() + "%";
                     ExperienceRange.Text = "You get " + FinalExperience + "% experience for killing monsters level " + MonsterLevelNum + ". \r\n \r\nYou will gain 100% experience from killing monsters level " + LowerLevel + " - " + TopLevel;
                 }
